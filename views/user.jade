@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  img(src="#{user.picture}")
+  h2 Welcome #{user.emails[0].value}!
+  br
+  a(href='/logout') Logout
+  
+  script.
+    console.log("#{JSON.stringify(user)}")
